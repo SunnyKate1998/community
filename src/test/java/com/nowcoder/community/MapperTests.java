@@ -11,7 +11,7 @@ import java.util.List;
 
 @SpringBootTest
 @ContextConfiguration(classes = CommunityApplication.class)
-public class MapperTest {
+public class MapperTests {
 
     @Autowired
     private DiscussPostMapper discussPostMapper;
