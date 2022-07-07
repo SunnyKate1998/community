@@ -40,13 +40,11 @@ public class UserService implements CommunityConstant {
     @Autowired
     private LoginTicketMapper loginTicketMapper;
 
-
-    public User findUserById(int id){
+    public User findUserById(int id) {
         return userMapper.selectById(id);
     }
 
     public Map<String, Object> register(User user) {
-
         Map<String, Object> map = new HashMap<>();
 
         // 空值处理
@@ -169,6 +167,10 @@ public class UserService implements CommunityConstant {
 
     public int updateHeader(int userId, String headerUrl) {
         return userMapper.updateHeader(userId, headerUrl);
+    }
+
+    public User findUserByName(String username) {
+        return userMapper.selectByName(username);
     }
 
 }
